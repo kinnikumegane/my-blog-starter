@@ -56,7 +56,8 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
+          # change the line below to "excerpt(pruneLength: 81)" and check the list of posts
+          excerpt(pruneLength: 80)
           fields {
             slug
           }
